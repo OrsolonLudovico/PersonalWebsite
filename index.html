@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/css/main.css">  
+</head>
+<body>
+    <div class="top-bar" id="topBar">
+        <button class="active" onclick="selectButton(this)">Home</button>
+        <button onclick="selectButton(this)">My uni notes</button>
+        <button onclick="selectButton(this)">My CV</button>
+        <button onclick="selectButton(this)">Contacts</button>
+    </div>
+
+    <div class="content-container">
+        <div class="info-box">
+            <h1>Benvenuto nella Nostra Pagina!</h1>
+            <p>
+                Questo è un esempio di pagina HTML con una **top bar** interattiva e una **box centrale** contenente alcune informazioni. 
+                Puoi personalizzare facilmente i contenuti e gli stili per adattarli alle tue esigenze.
+                Usa i pulsanti nella barra superiore per simulare la navigazione tra le diverse sezioni del sito.
+            </p>
+            <p>
+                Siamo qui per offrirti la migliore esperienza possibile. Esplora e divertiti!
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Funzione JavaScript per gestire la selezione dei pulsanti
+        function selectButton(button) {
+            const buttons = document.querySelectorAll('#topBar button');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+            console.log("Hai selezionato: " + button.textContent);
+        }
+    </script>
+</body>
+</html>
