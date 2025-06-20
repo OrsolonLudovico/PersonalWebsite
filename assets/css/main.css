@@ -1,66 +1,28 @@
-/* Stili CSS */
+/* Stili CSS personalizzati */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #e9ecef; /* Un colore di sfondo più chiaro e moderno */
 }
 
-.top-bar {
-    background-color: #333;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+/* Stili per la navbar (Bootstrap si occupa della maggior parte) */
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.75); /* Colore del testo dei link non attivi */
+    padding: 0.5rem 1rem; /* Padding per i bottoni */
+    border-radius: 0.375rem; /* Bordi arrotondati */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.top-bar button {
-    background-color: #555;
+.navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1); /* Sfondo leggero al passaggio del mouse */
+}
+
+.navbar-nav .nav-link.active {
+    background-color: #0d6efd; /* Blu di Bootstrap per il pulsante attivo */
     color: white;
-    padding: 14px 20px;
-    margin: 0 5px;
-    border: none;
-    cursor: pointer;
-    font-size: 17px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-weight: bold;
 }
 
-.top-bar button:hover {
-    background-color: #777;
-}
-
-.top-bar button.active {
-    background-color: #007bff; /* Colore blu per il pulsante selezionato */
-}
-
-.content-container {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-.info-box {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 600px;
-    width: 100%;
-}
-
-.info-box h1 {
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.info-box p {
-    color: #666;
-    line-height: 1.6;
-}
+/* Nessun bisogno di stili aggiuntivi per .content-container e .info-box
+   Bootstrap gestisce allineamento, centratura e stili delle card */
