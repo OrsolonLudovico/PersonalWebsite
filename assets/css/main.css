@@ -1,28 +1,24 @@
-/* Stili CSS personalizzati */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #e9ecef; /* Un colore di sfondo più chiaro e moderno */
+    background-color: #e9ecef;
 }
 
-/* Stili per la navbar (Bootstrap si occupa della maggior parte) */
+/* Navbar style */
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.75); /* Colore del testo dei link non attivi */
-    padding: 0.5rem 1rem; /* Padding per i bottoni */
-    border-radius: 0.375rem; /* Bordi arrotondati */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    padding: 0.5rem 1rem; /* Buttons padding */
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+    border-radius: 40rem; /* Rounded buttons */
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.navbar-nav .nav-link:hover {
-    color: rgba(255, 255, 255, 1);
-    background-color: rgba(255, 255, 255, 0.1); /* Sfondo leggero al passaggio del mouse */
-}
 
 .navbar-nav .nav-link.active {
-    background-color: #0d6efd; /* Blu di Bootstrap per il pulsante attivo */
-    color: white;
-    font-weight: bold;
+    background-color: #0d6efd; /* Color for active button */
+    color: #f8f9fa; 
+    font-weight: 600; /*semi bold*/
 }
-
-/* Nessun bisogno di stili aggiuntivi per .content-container e .info-box
-   Bootstrap gestisce allineamento, centratura e stili delle card */
