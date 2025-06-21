@@ -22,3 +22,15 @@ body {
     color: #f8f9fa; 
     font-weight: 600; /*semi bold*/
 }
+
+.collapse:not(.show) {
+        display: block;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.2s ease; /* Cambia qui la durata */
+}
+
+.collapse.show {
+    height: auto;
+    transition: height 0.2s ease;
+}
