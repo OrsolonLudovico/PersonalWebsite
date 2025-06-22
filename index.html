@@ -53,9 +53,10 @@
             button.classList.add('active');
             button.setAttribute('aria-current', 'page');
 
-            // Determina il file da caricare
+            // Determines file to load
             const pageId = button.id;
             const pageUrl = `pages/${pageId}.html`;
+            console.log(pageUrl); 
 
             fetch(pageUrl)
                 .then(response => {
