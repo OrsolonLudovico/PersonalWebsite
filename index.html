@@ -35,7 +35,7 @@
     </nav>
 
     <div class="container d-flex flex-column justify-content-center align-items-center py-5">
-        <div class="card shadow-lg p-4 p-md-5 text-center" style="max-width: 700px; width: 100%;">
+        <div class="card shadow-lg p-4 p-md-5 text-center" style="max-width: 900px; width: 100%;">
             <div id="placeholder" class="card-body"></div>
         </div>
     </div>
@@ -66,6 +66,18 @@
                 })
                 .then(data => {
                     document.getElementById('placeholder').innerHTML = data;
+                    // Calcola età solo se siamo nella home
+                    if (button.id === "home") {
+                        const birthDate = new Date(2001, 3, 30);
+                        const today = new Date();
+                        let age = today.getFullYear() - birthDate.getFullYear();
+                        const m = today.getMonth() - birthDate.getMonth();
+                        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                            age--;
+                        }
+                        const ageSpan = document.getElementById('age');
+                        if (ageSpan) ageSpan.textContent = age;
+                    }
                 })
                 .catch(error => {
                     console.error('Errore di caricamento:', error);
@@ -73,7 +85,7 @@
                 });
         }
 
-        // Esegui questo codice quando il DOM è pronto per caricare la pagina Home di default
+        // Execute this when the DOM is ready
         document.addEventListener('DOMContentLoaded', function() {
             const homeButton = document.getElementById('home');
             if (homeButton) {
