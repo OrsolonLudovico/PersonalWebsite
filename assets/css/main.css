@@ -23,14 +23,37 @@ body {
     font-weight: 600; /*semi bold*/
 }
 
-.collapse:not(.show) {
-        display: block;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.2s ease; /* Cambia qui la durata */
-}
-
 .collapse.show {
     height: auto;
     transition: height 0.2s ease;
 }
+
+.collapse {
+    transition: height 0.2s ease;
+}
+
+.pfp-responsive {
+    width: 120px !important;
+    height: 120px !important;
+}
+
+@media (min-width: 768px) { /*Allows for the title not to everflow when screen collapses (576 corresponds to sm in bootstrap)*/
+    .move-up-md {
+        transform: translateY(-30%);
+    }
+    .pfp-responsive {
+        width: 225px !important;
+        height: 225px !important;
+    }
+    .col-img-min {
+        min-width: 225px;
+    }
+}
+
+@media (max-width: 235px) {
+    .pfp-responsive {
+        width: 50px !important;
+        height: 50px !important;
+    }
+}
+
