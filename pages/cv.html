@@ -1,12 +1,223 @@
-<h1 class="text-primary mb-4">CV</h1>
-<p class="lead">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-    voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-<p class="mb-4">
-    Scarica appunti a <a href="https://github.com/OrsolonLudovico/StaticNotes/releases/download/v1.0/Automata.onepkg" class="text-info fw-bold">Automata</a>
-</p>
-<p>
-    Footerrrrr
-</p>
+<a href="/images/Orsolon_Ludovico_CV.pdf" target="_blank" rel="noopener" class="btn btn-dark btn-lg mb-0">
+  Download my CV here
+</a>
+
+<style>
+.timeline {
+  position: relative;
+  margin-left: 2.5em;
+  padding-left: 2.5em;
+  font-size: 1rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0.22em;
+  height: 100%;
+  background: #212529;
+  border-radius: 0.11em;
+}
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2em;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item .dot {
+  position: absolute;
+  left: calc(-2.5em + 0.11em);
+  top: 0.5em;
+  width: 1.1em;
+  height: 1.1em;
+  background: #fff;
+  border: 0.22em solid #212529;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.18em #21252922;
+  z-index: 2;
+  transform: translateX(-50%);
+}
+.timeline-year {
+  min-width: 4em;
+  width: 4em;
+  text-align: left;
+  color: #212529;
+  font-weight: bold;
+  font-size: 1em;
+  margin-right: 0.5em;
+  margin-top: 0.1em;
+  flex-shrink: 0;
+}
+.timeline-content {
+  margin-left: 0.2em;
+  font-size: 0.97em;
+  flex: 1;
+}
+.timeline-content h5 {
+  font-size: 1em;
+  margin-bottom: 0.2em;
+}
+.timeline-content p {
+  font-size: 0.97em;
+  margin-bottom: 0;
+  text-align: left;
+}
+.timeline-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.2em;
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+@media (max-width: 36em) {
+  .timeline {
+    margin-left: 1em;
+    padding-left: 1em;
+    font-size: 0.95em;
+  }
+  .timeline::before {
+    left: 0;
+  }
+  .timeline-item .dot {
+    left: calc(-1em + 0.11em);
+    width: 0.8em;
+    height: 0.8em;
+    border-width: 0.13em;
+    box-shadow: 0 0 0 0.09em #007bff22;
+    top: 0.5em;
+  }
+  .timeline-year {
+    min-width: 2em;
+    font-size: 0.97em;
+    margin-right: 0.5em;
+  }
+
+  .timeline-content{
+    font-size: 0.95em;
+    text-align: left;
+  }
+}
+@media (max-width: 991.5px) {
+  .container.timelineLudo {
+    margin-left: -1.5em;
+  }
+}
+
+</style>
+
+<div class="container my-5 timelineLudo mt-5">
+  <h3 class="text-center mb-4 mt-0">My timeline</h3>
+  <div class="row">
+    <div class="col-md-10 mx-auto">
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div class="timeline-year">2018</div>
+          <div class="timeline-content">
+            <p class="timeline-title">Stage#1</p>
+            <p>Computer House Montecchio Maggiore (VI)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div class="timeline-year">2019</div>
+          <div class="timeline-content">
+            <p class="timeline-title">Stage#2</p>
+            <p>CRM Informatica Arziganno (VI)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <p class="timeline-title">Diploma di Maturità Scientifica</p>
+            <p>Liceo Scientifico L. Da Vinci Arzignano (VI)</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div class="timeline-year">2020</div>
+          <div class="timeline-content">
+            <p class="timeline-title">Work as Field Inspector</p>
+            <p>Osmotech srl</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div class="timeline-year">2023</div>
+          <div class="timeline-content">
+            <p class="timeline-title">Bachelor degree in Ingegneria Informatica</p>
+            <p>University of Padova</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div class="timeline-year">2025/26</div>
+          <div class="timeline-content">
+            <p class="timeline-title">Master Degree in Computer Engineering</p>
+            <p>University of Padova (In progress)</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row mt-5">
+  <div class="col-md-6 mb-4">
+    <h4 class="mb-3 text-start">Programming languages</h4>
+    <ul class="list-unstyled ps-0 ms-0 programming-list">
+      <li>Python</li>
+      <li>C/C++</li>
+      <li>Java</li>
+      <li>JavaScript</li>
+      <li>HTML/CSS</li>
+      <li>R</li>
+    </ul>
+  </div>
+  <div class="col-md-6 mb-4">
+    <h4 class="mb-3 text-start">Language skills</h4>
+    <ul class="list-unstyled ps-0 ms-0 programming-list">
+      <li>Italian: Native</li>
+      <li>English: C1</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+.programming-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.programming-list li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 0.1em;
+  line-height: 1.5;
+}
+.programming-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #212529;
+  font-size: 1em;
+  line-height: 1.5;
+}
+</style>
+
+
