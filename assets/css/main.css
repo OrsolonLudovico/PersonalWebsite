@@ -1,42 +1,78 @@
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Dark text color utility */
+.text-dark-custom {
+    color: #181717 !important;
+}
+
+/* Center alignment utility */
+.align-self-center-custom {
+    align-self: center;
+}
+
+/* Card max-width utility */
+.card-max-width {
+    max-width: 55rem;
+    width: 100%;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #e9ecef;
 }
 
-/* Navbar style */
+/* Remove text decoration from social media links */
+a.mx-2 {
+    text-decoration: none !important;
+}
+
+/* ========================================
+   NAVIGATION STYLES
+   ======================================== */
+
 .navbar-nav .nav-link {
-    padding: 0.5rem 1rem; /* Buttons padding */
-    margin-bottom: 0.1rem;
-    margin-top: 0.1rem;
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-    border-radius: 40rem; /* Rounded buttons */
+    padding: 0.5rem 1rem;
+    margin: 0.1rem 0.2rem;
+    border-radius: 40rem;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-
 .navbar-nav .nav-link.active {
-    background-color: #0d6efd; /* Color for active button */
+    background-color: #0d6efd;
     color: #f8f9fa; 
-    font-weight: 600; /*semi bold*/
+    font-weight: 600;
 }
+
+/* ========================================
+   BOOTSTRAP OVERRIDES
+   ======================================== */
 
 .collapse.show {
     height: auto;
+}
+
+.collapse,
+.collapsing {
     transition: height 0.2s ease;
 }
 
-.collapse {
-    transition: height 0.2s ease;
-}
+/* ========================================
+   PROFILE PICTURE RESPONSIVE
+   ======================================== */
 
 .pfp-responsive {
     width: 120px !important;
     height: 120px !important;
 }
 
-@media (min-width: 768px) { /*Allows for the title not to everflow when screen collapses (576 corresponds to sm in bootstrap)*/
+@media (min-width: 768px) {
     .move-up-md {
         transform: translateY(-10%);
     }
@@ -56,22 +92,259 @@ body {
     }
 }
 
-a.mx-2 {
+/* ========================================
+   TIMELINE STYLES (CV PAGE)
+   ======================================== */
+
+.timeline {
+    position: relative;
+    margin-left: 2.5em;
+    padding-left: 2.5em;
+    font-size: 1rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.22em;
+    height: 100%;
+    background: #212529;
+    border-radius: 0.11em;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item .dot {
+    position: absolute;
+    left: calc(-2.5em + 0.11em);
+    top: 0.5em;
+    width: 1.1em;
+    height: 1.1em;
+    background: #fff;
+    border: 0.22em solid #212529;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0.18em #21252922;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.timeline-year {
+    min-width: 4em;
+    width: 4em;
+    text-align: left;
+    color: #212529;
+    font-weight: bold;
+    font-size: 1em;
+    margin-right: 0.5em;
+    margin-top: 0.1em;
+    flex-shrink: 0;
+}
+
+.timeline-content {
+    margin-left: 0.2em;
+    font-size: 0.97em;
+    flex: 1;
+}
+
+.timeline-content h5 {
+    font-size: 1em;
+    margin-bottom: 0.2em;
+}
+
+.timeline-content p {
+    font-size: 0.97em;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.timeline-title {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* ========================================
+   PROGRAMMING LISTS (CV PAGE)
+   ======================================== */
+
+.programming-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.programming-list li {
+    position: relative;
+    padding-left: 1.2em;
+    margin-bottom: 0.1em;
+    line-height: 1.5;
+}
+
+.programming-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #212529;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* ========================================
+   MODAL STYLES (MY NOTES PAGE)
+   ======================================== */
+
+#onenoteHelpModal.modal.fade .modal-dialog {
+    transition: transform 0.2s ease-out;
+}
+
+#onenoteHelpModal.modal.fade:not(.show) .modal-dialog {
+    transform: translate(0, -10%);
+}
+
+.modal-dialog-centered-custom {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 3rem);
+    margin-top: 3rem;
+}
+
+/* ========================================
+   SUBJECT CARDS (MY NOTES PAGE)
+   ======================================== */
+
+.subject-card {
+    background: #fff;
+    border-radius: 0.75rem;
+    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+.subject-card:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.15);
+}
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 6;
+}
+
+.subject-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.subject-card:hover .subject-image {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(24,23,23,0.3) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subject-card:hover .overlay {
+    opacity: 1;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.subject-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #181717;
+    margin-bottom: 0;
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.subject-title:hover {
+    color: #0d6efd;
+}
+
+.subject-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subject-info li {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.card-content a {
+    text-decoration: none;
+}
+
+/* ========================================
+   COLLAPSE BUTTON STYLES (MY NOTES PAGE)
+   ======================================== */
+
+.btn-link:hover {
     text-decoration: none !important;
 }
 
-.pdf-container {
-    width: 100%;
-    min-height: 400px;
-    max-width: 900px;
-    margin: 0 auto;
+.collapse-icon {
+    font-size: 0.875rem;
 }
 
-.pdf-container object {
-    width: 100%;
-    min-height: 400px;
-    height: 70vh;
-    border: none;
+.btn-link[aria-expanded="false"] .collapse-icon:before {
+    content: "\f054"; /* fa-chevron-right */
+}
+
+.btn-link[aria-expanded="true"] .collapse-icon:before {
+    content: "\f078"; /* fa-chevron-down */
+}
+
+/* ========================================
+   MEDIA QUERIES
+   ======================================== */
+
+@media (min-width: 992px) {
+    .modal-dialog-centered-custom {
+        margin-top: 5rem;
+        min-height: calc(100% - 5rem);
+    }
+    
+    .container.timelineLudo {
+        margin-left: -1.5em;
+    }
+}
+
+@media (max-width: 991.5px) {
+    .container.timelineLudo {
+        margin-left: -1.5em;
+    }
 }
 
 @media (max-width: 600px) {
@@ -81,4 +354,50 @@ a.mx-2 {
     }
 }
 
+@media (max-width: 576px) {
+    .image-container {
+        aspect-ratio: 16 / 8;
+    }
+    
+    .subject-title {
+        font-size: 0.9rem;
+    }
+    
+    .card-content {
+        padding: 0.75rem;
+    }
+    
+    .subject-info li {
+        font-size: 0.85rem;
+    }
+}
 
+@media (max-width: 36em) {
+    .timeline {
+        margin-left: 1em;
+        padding-left: 1em;
+        font-size: 0.95em;
+    }
+    
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-item .dot {
+        left: calc(-1em + 0.11em);
+        width: 0.8em;
+        height: 0.8em;
+        border-width: 0.13em;
+        box-shadow: 0 0 0 0.09em #007bff22;
+        top: 0.5em;
+    }
+    
+    .timeline-year {
+        min-width: 2em;
+        font-size: 0.97em;
+        margin-right: 0.5em;
+    }    .timeline-content {
+        font-size: 0.95em;
+        text-align: left;
+    }
+}
