@@ -73,9 +73,9 @@
                         throw new Error(`Errore nel caricamento della pagina: ${pageUrl}`);
                     }
                     return response.text();
-                })
-                .then(data => {
+                })                .then(data => {
                     document.getElementById('placeholder').innerHTML = data;
+                    
                     // Calcola età solo se siamo nella home
                     if (button.id === "home") {
                         const birthDate = new Date(2001, 3, 30);
@@ -87,6 +87,18 @@
                         }
                         const ageSpan = document.getElementById('age');
                         if (ageSpan) ageSpan.textContent = age;
+                    }
+                    
+                    // Esegui script per la pagina MyNotes
+                    if (button.id === "MyNotes") {
+                        const onenoteHelpLink = document.getElementById('onenote-help-link');
+                        if (onenoteHelpLink) {
+                            onenoteHelpLink.addEventListener('click', function(e) {
+                                e.preventDefault();
+                                const modal = new bootstrap.Modal(document.getElementById('onenoteHelpModal'));
+                                modal.show();
+                            });
+                        }
                     }
                 })
                 .catch(error => {
@@ -100,9 +112,9 @@
             const homeButton = document.getElementById('home');
             if (homeButton) {
                 selectButton(homeButton);
-            }
+            }        
         });
-        
+
     </script>
 </body>
 </html>
