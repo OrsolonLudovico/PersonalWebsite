@@ -234,6 +234,7 @@ a.mx-2 {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 0.5rem;
+    user-select: none; /* Prevent text selection on hover */
 }
 
 .subject-card:hover {
@@ -284,10 +285,6 @@ a.mx-2 {
     margin-bottom: 0;
     text-decoration: none;
     line-height: 1.2;
-}
-
-.subject-title:hover {
-    color: #0d6efd;
 }
 
 .subject-info {
