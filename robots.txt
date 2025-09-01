@@ -1,6 +1,6 @@
 User-agent: *
 Disallow: /
-Allow: /home.html
+Allow: /index.html
 
 Sitemap: https://ludovicoorsolon.com/sitemap.xml
 Sitemap: https://www.ludovicoorsolon.com/sitemap.xml
