@@ -1,5 +1,8 @@
 User-agent: *
 Disallow: /pages/
+Disallow: /fav/
+Disallow: /images/
+Disallow: /assets/
 
 Sitemap: https://ludovicoorsolon.com/sitemap.xml
 Sitemap: https://www.ludovicoorsolon.com/sitemap.xml
