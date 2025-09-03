@@ -1,6 +1,5 @@
 User-agent: *
 Disallow: /pages/
-Allow: /
 
 Sitemap: https://ludovicoorsolon.com/sitemap.xml
 Sitemap: https://www.ludovicoorsolon.com/sitemap.xml
