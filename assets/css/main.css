@@ -23,9 +23,9 @@
    ======================================== */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Cormorant Garamond", Arial, Helvetica, Georgia, Palatino, Tahoma, serif;
     margin: 0;
-    background-color: #e9ecef;
+    background-color: #ffffff;
 }
 
 /* Remove text decoration from social media links */
@@ -37,17 +37,23 @@ a.mx-2 {
    NAVIGATION STYLES
    ======================================== */
 
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 1px 0 #d3d3d3 !important;
+    padding: 0.3rem 0 !important;
+}
+
 .navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 1rem;
     margin: 0.1rem 0.2rem;
     border-radius: 40rem;
+    color: #6c757d;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .navbar-nav .nav-link.active {
-    background-color: #0d6efd;
-    color: #f8f9fa; 
-    font-weight: 600;
+    color: #000000;
+    /*font-weight: 600;*/
 }
 
 /* ========================================
@@ -228,18 +234,18 @@ a.mx-2 {
    ======================================== */
 
 .subject-card {
-    background: #fff;
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
     border-radius: 0.75rem;
-    box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
     margin-bottom: 0.5rem;
     user-select: none; /* Prevent text selection on hover */
 }
 
 .subject-card:hover {
     transform: translateY(-0.3125rem);
-    box-shadow: 0 0.5rem 1.5625rem rgba(0,0,0,0.15);
 }
 
 .image-container {
@@ -272,6 +278,12 @@ a.mx-2 {
 
 .subject-card:hover .overlay {
     opacity: 1;
+}
+
+.card {
+    background-color: transparent;
+    border: 1px solid #d3d3d3 !important;  /* Activate this for debugging */
+    box-shadow: none !important;
 }
 
 .card-content {
